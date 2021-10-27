@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./chat-server
+    volumes:
+      - /app/node_modules
+      - ./chat-server:/app
+    image: "anjali3122/chat-server"
+    ports:
+      - "5000:5000"
+
+  client:
+    build:
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+    image: "anjali3122/chat-client"
+    ports:
+      - "3000:3000"

@@ -1,0 +1,13 @@
+build/
+dist/
+node_modules/
+lib/
+.coverage/
+.cache
+.DS_Store
+.env
+.idea
+.cache
+.vscode
+*.log
+yarn.lock
